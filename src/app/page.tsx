@@ -24,8 +24,8 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col items-center space-y-4">
-            <p className={`${reggae.className} w-full text-5xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text`}>
-              はだしのゲンちゃんω
+            <p className={`${reggae.className} pb-2 w-full text-5xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text`}>
+              genchan_omega
             </p>
             <div className="flex w-full justify-center items-center">
               <Icon 
