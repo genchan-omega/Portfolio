@@ -26,39 +26,23 @@ export default function Header() {
       >
         <ul className='flex flex-col space-y-6 justify-center items-center border-2 bg-black p-0 m-0'>
           <li className='flex justify-center items-center h-full w-full border-b-2 border-dotted hover:bg-gray-600 transition duration-300 p-0 m-0'>
-            <Link href="/" className='h-full w-full p-4'>
-              <div className='flex justify-center items-center w-full h-full p-0'>
-                <p className='text-xl'>
-                  Home
-                </p>
-              </div>
+            <Link href="/" className='h-full w-full p-4 text-xl text-center'>
+              Home
             </Link>
           </li>
           <li className='flex justify-center items-center h-full w-full border-b-2 border-dotted hover:bg-gray-600 transition duration-300 p-0 m-0'>
-            <Link href="/timeline" className='h-full w-full p-4'>
-              <div className='flex justify-center items-center w-full h-full p-0'>
-                <p className='text-xl'>
-                  Timeline
-                </p>
-              </div>
+            <Link href="/timeline" className='h-full w-full p-4 text-xl text-center'>
+              Timeline
             </Link>
           </li>
           <li className='flex justify-center items-center h-full w-full border-b-2 border-dotted hover:bg-gray-600 transition duration-300 p-0 m-0'>
-            <Link href="/blog" className='h-full w-full p-4'>
-              <div className='flex justify-center items-center w-full h-full p-0'>
-                <p className='text-xl'>
-                  Blog
-                </p>
-              </div>
+            <Link href="/blog" className='h-full w-full p-4 text-xl text-center'>
+              Blog
             </Link>
           </li>
           <li className='flex justify-center items-center h-full w-full hover:bg-gray-600 transition duration-300 p-0 m-0'>
-            <Link href="/project" className='h-full w-full p-4'>
-              <div className='flex justify-center items-center w-full h-full p-0'>
-                <p className='text-xl'>
-                  Project
-                </p>
-              </div>
+            <Link href="/project" className='h-full w-full p-4 text-xl text-center'>
+              Project
             </Link>
           </li>
         </ul>

@@ -11,7 +11,7 @@ interface Props {
 export default function Subtitile(props: Props) {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <h1 className={`${lobster.className} pt-14 pb-14 font-bold text-6xl`}>
+      <h1 className={`${lobster.className} pt-14 pb-14 font-bold text-8xl`}>
         {props.name}
       </h1>
     </div>

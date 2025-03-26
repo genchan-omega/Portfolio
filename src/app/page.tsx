@@ -11,7 +11,7 @@ const reggae = Reggae_One({weight: '400', subsets:['latin']});
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center">
+    <div className="flex flex-col min-h-screen w-full max-w-screen mx-auto items-center justify-center">
       <div className="flex flex-col gap-5 items-center justify-center h-screen w-full flex-1">
         <div className="flex flex-row gap-5 items-center justify-center">
           <div className="relative p-1 rounded-4xl bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500">
