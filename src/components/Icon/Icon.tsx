@@ -18,7 +18,7 @@ export default function Icon(props: Props) {
           src={props.src}
           // layout="responsive"
           width={120}
-          height={1}
+          height={120}
           alt={props.alt}
           className={`${props.className} w-full transform hover:scale-110 transition duration-300`}
         />
