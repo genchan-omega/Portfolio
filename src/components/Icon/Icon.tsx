@@ -13,10 +13,10 @@ interface Props {
 export default function Icon(props: Props) {
   return (
     <div className="w-1/3 flex justify-center items-center">
-      <Link href={props.href} className="flex w-full justify-center items-center">
+      <Link href={props.href} className="flex w-[80px] md:w-[150px] justify-center items-center">
         <Image
           src={props.src}
-          // layout="responsive"
+          layout="responsive"
           width={120}
           height={120}
           alt={props.alt}
