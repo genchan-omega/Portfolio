@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="text-white p-4 fixed top-0 left-0 w-full flex justify-between items-center">
-      <h1 className="text-xl font-bold">Welcome to My Website</h1>
+      <h1 className="text-xl font-bold"></h1>
 
       <button
         className="min-h-10 min-w-10 flex flex-col justify-around items-center p-2 rounded-md hover:bg-gray-600 transition duration-300"
@@ -28,6 +28,11 @@ export default function Header() {
           <li className='flex justify-center items-center h-full w-full border-b-2 border-dotted hover:bg-gray-600 transition duration-300 p-0 m-0'>
             <Link href="/" className='h-full w-full p-4 text-xl text-center'>
               Home
+            </Link>
+          </li>
+          <li className='flex justify-center items-center h-full w-full border-b-2 border-dotted hover:bg-gray-600 transition duration-300 p-0 m-0'>
+            <Link href="/aboutme" className='h-full w-full p-4 text-xl text-center'>
+              About Me
             </Link>
           </li>
           <li className='flex justify-center items-center h-full w-full border-b-2 border-dotted hover:bg-gray-600 transition duration-300 p-0 m-0'>

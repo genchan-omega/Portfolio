@@ -12,18 +12,18 @@ import Footer from "@/components/Footer/Footer";
 import Subtitle from "@/components/Subtitle/Subtitle";
 
 export default function Timeline() {
-  const [items, setItems] = useState<{ top: number; left: number }[]>([]);
+  const [items, setItems] = useState<{ top: number; center: number }[]>([]);
 
   const generateRandomPositions = (count: number) => {
     const baseTop = 200;
-    const baseLeft = 280;
-    const verticalSpacing = 180;
-    const horizontalRange = 50;
+    const baseCenter = window.innerWidth / 2;
+    const verticalSpacing = 300;
+    const horizontalRange = 100;
     const verticalRange = 30;
 
     return new Array(count).fill(0).map((_, index) => ({
       top: baseTop + index * verticalSpacing + Math.random() * verticalRange,
-      left: baseLeft + (index % 2 === 0 ? -1 : 1) * Math.random() * horizontalRange,
+      center: baseCenter + (index%2 === 0 ? -1 : 1) * Math.random() * horizontalRange,
     }));
   };
 
@@ -39,8 +39,8 @@ export default function Timeline() {
         {items.map((pos, index) => (
           <div
             key={index}
-            className="absolute w-64 h-32 bg-blue-500 text-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4"
-            style={{ top: `${pos.top}px`, left: `${pos.left}px` }}
+            className="absolute w-50 h-30 md:w-100 md:h-64 transform -translate-x-20 md:-translate-x-75 bg-blue-500 text-white flex flex-col items-center justify-center rounded-lg p-4"
+            style={{ top: `${pos.top}px`, left: `${pos.center}px`}}
           >
             <Image
               src="/dummy.png"
