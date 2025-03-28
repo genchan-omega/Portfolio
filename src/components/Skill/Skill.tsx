@@ -14,7 +14,7 @@ export default function Skill(props: Props) {
       width={150}
       height={150}
       alt={props.alt}
-      className="p-2"
+      className="p-2 w-16 md:w-32"
     />
   );
 }
