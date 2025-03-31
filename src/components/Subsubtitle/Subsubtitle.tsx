@@ -8,9 +8,9 @@ interface Props {
   name: string;
 }
 
-export default function Subtitile(props: Props) {
+export default function Subsubtitle(props: Props) {
   return (
-    <h1 className={`${lobster.className} pt-14 pb-14 font-bold text-7xl text-center`}>
+    <h1 className={`${lobster.className} pb-14 font-bold text-5xl text-center`}>
       {props.name}
     </h1>
   );
