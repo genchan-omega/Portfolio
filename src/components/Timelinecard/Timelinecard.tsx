@@ -14,7 +14,7 @@ interface Props {
 export default function Timelinecard(props: Props) {
 	return (
     <Fadein>
-      <figure className="w-full md:w-128 border-2 pb-5">
+      <figure className="w-full md:w-128 border-2 pb-2">
         <div className="relative h-32">
           <Image
             src={props.src}
@@ -27,7 +27,7 @@ export default function Timelinecard(props: Props) {
         <figcaption>
           <p className="text-right pr-4">{props.date}</p>
           <h2 className="text-3xl font-bold text-center">{props.title}</h2>
-          <p className="pt-3">
+          <p className="p-3">
             {props.description}
           </p>
         </figcaption>

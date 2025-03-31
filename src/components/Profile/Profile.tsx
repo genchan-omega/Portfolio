@@ -21,19 +21,19 @@ export default function Profile() {
           <Icon 
             href="https://github.com/genchan-omega"
             alt="Icon of github"
-            className="rounded-4xl invert"
+            className="invert"
             sort="github"
           />
           <Icon 
             href="https://x.com/genchan_omega"
             alt="Icon of twitter"
-            className="rounded-4xl invert"
+            className="invert"
             sort="twitter"
           />
           <Icon 
             href="https://atcoder.jp/users/genchan_omega"
             alt="Icon of atcoder"
-            className="rounded-4xl"
+            className=""
             sort="atcoder"
           />
         </div>

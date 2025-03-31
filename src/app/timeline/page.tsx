@@ -10,7 +10,7 @@ export default function Timeline() {
 			<div className="flex flex-col w-full mx-auto">
 				<Header />
 				<Subtitle name="Timeline" />
-				<div className="flex flex-col justify-center items-center gap-20">
+				<div className="flex flex-col justify-center items-center gap-20 w-full">
             <Timelinecard
               src="/timeline/univ.png"
               title="大学院入学"
