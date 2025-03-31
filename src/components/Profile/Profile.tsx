@@ -20,21 +20,21 @@ export default function Profile() {
         <div className="flex w-full justify-center items-center">
           <Icon 
             href="https://github.com/genchan-omega"
-            src="/profile/github.svg"
             alt="Icon of github"
             className="rounded-4xl invert"
+            sort="github"
           />
           <Icon 
             href="https://x.com/genchan_omega"
-            src="/profile/twitter.svg"
             alt="Icon of twitter"
             className="rounded-4xl invert"
+            sort="twitter"
           />
           <Icon 
             href="https://atcoder.jp/users/genchan_omega"
-            src="/profile/atcoder.png"
             alt="Icon of atcoder"
             className="rounded-4xl"
+            sort="atcoder"
           />
         </div>
       </div>

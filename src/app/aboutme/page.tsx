@@ -8,6 +8,8 @@ import Footer from "@/components/Footer/Footer";
 import Subtitle from "@/components/Subtitle/Subtitle";
 import Skill from "@/components/Skill/Skill";
 
+import profile from "@/public/profile/profile.jpg"
+
 export default function Aboutme() {
 	return (
 		<div>
@@ -20,11 +22,10 @@ export default function Aboutme() {
 				<figure className="flex flex-col md:flex-row justify-center items-center p-5 gap-5">
 					<div className="p-1 rounded-4xl bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500">
 						<Image
-							src="/profile/profile.jpg"
-							width={1000}
-							height={1000}
+							src={profile}
 							alt="Picture of the author"
 							className="w-[200px] md:max-w-xs rounded-4xl shadow-md bg-white p-1"
+              objectFit="contain"
 						/>
 					</div>
 					<table className="w-full max-w-md border-collapse border border-gray-300 text-left text-lg">
@@ -49,13 +50,16 @@ export default function Aboutme() {
 								</td>
 							</tr>
 							<tr className="border-b border-gray-300">
-								<th className="p-2 font-semibold">Circle</th>
-								<td className="p-2">IEEE TUAT SB, MCC</td>
+								<th className="p-2 font-semibold">Club</th>
+								<td className="p-2">
+                  IEEE TUAT SB
+                </td>
 							</tr>
 							<tr>
 								<th className="p-2 font-semibold">Hobby</th>
-								<td className="p-2">競技プログラミング，スマブラ<br/>
-                  テトリス，アニメ鑑賞</td>
+								<td className="p-2">
+                  競技プログラミング，テトリス，アニメ鑑賞
+                </td>
 							</tr>
 						</tbody>
 					</table>
