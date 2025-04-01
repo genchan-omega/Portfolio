@@ -4,7 +4,7 @@
 import Link from "next/link";
 import {Reggae_One} from 'next/font/google';
 
-import Icon from '@/components/Icon/Icon';
+import Icon from '@/components/index/Icon/Icon';
 
 const reggae = Reggae_One({weight: '400', subsets:['latin']});
 

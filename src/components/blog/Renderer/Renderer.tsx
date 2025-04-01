@@ -18,10 +18,12 @@ export default function Renderer(props: Props){
         rehypePlugins={[rehypeKatex]}
         components={{
           h1: ({ children }) => <h1 className="text-3xl font-bold pt-4 underline">{children}</h1>,
-          h2: ({ children }) => <h2 className="text-2xl font-semibold">{children}</h2>,
+          h2: ({ children }) => <h2 className="text-2xl 
+          font-bold">{children}</h2>,
+          h3: ({ children }) => <h3 className="text-xl font-bold underline decoration-dotted">{children}</h3>,
           p: ({ children }) => <p className="text-lg mt-4">{children}</p>,
           a: ({ children, href }) => (
-            <a href={href} className="text-lg mt-4 underline text-blue-500 hover:text-blue-700">
+            <a href={href} className="text-lg mt-4 text-blue-500 hover:text-blue-700">
               {children}
             </a>
           ),

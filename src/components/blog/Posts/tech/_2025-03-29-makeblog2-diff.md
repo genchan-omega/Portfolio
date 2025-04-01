@@ -26,4 +26,4 @@ Enterキーを押せば！
 
 ![nextjsja/docs](/posts/docs3.png)
 
-あれぇ？ということで，なぜか勝手にPages RouterのDocsに飛ばされてしまいました．このように，App RouterとPages Routerは本当に混ざりやすく，知らぬ間に逆のDocsを読んでいたと言うことが頻発しますので，必ず今どちらのDocsを読んでいるのかを強く意識することお勧めします．
+あれぇ？ということで，なぜか勝手にPages RouterのDocsに飛ばされてしまいました．このように，App RouterとPages Routerは本当に混ざりやすく，知らぬ間に逆のDocsを読んでいたと言うことが頻発しますので，必ず今どちらのDocsを読んでいるのかを強く意識することをお勧めします．
