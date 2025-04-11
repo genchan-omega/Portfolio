@@ -1,6 +1,6 @@
 ---
 title: "npmとnpxコマンド"
-img: "/others/rock.jpg"
+img: "/others/dummy.png"
 date: "2025-03-29"
 description: "自作ブログを作るために奮闘した記録を残します．"
 tags: []

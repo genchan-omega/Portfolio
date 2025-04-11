@@ -42,7 +42,7 @@ export default function Timeline() {
 					description="東京農工大学知能情報システム工学科に入学しました．"
 				/>
 				<Timelinecard
-					src="/others/botchi.jpg"
+					src="/others/dummy.png"
 					title="英検三級取得"
 					date="2018/7"
 					description="実用英語技能検定の三級を取得しました．ところで，英検ってロゴを自由に掲載してはいけないんですね．"
