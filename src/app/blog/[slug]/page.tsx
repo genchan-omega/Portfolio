@@ -1,7 +1,7 @@
 // app/blog/[slug]/page.tsx
 
 import { client } from "@/libs/microcms";
-// import { notFound } from 'next/navigation'
+import parse from "html-react-parser";
 
 import Image from "next/image";
 
@@ -21,15 +21,12 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function Post({ params }: {params:{slug: string}}){
-  const { slug } = params;
-
-  // slugによって記事を選択し，postに格納する
+export default async function Post({ params }: {params: Promise<{ slug: string }>;}){
+  const { slug } = await params;
   const post = await client.getListDetail({
     endpoint: "blog",
     contentId: slug,
   });
-  console.log(post);
 
   return (
     <div className="flex flex-col min-h-screen w-full max-w-screen mx-auto items-center justify-center">
@@ -37,7 +34,7 @@ export default async function Post({ params }: {params:{slug: string}}){
         <Header />
         <div className="pt-14 w-full overflow-hidden">
           <Image
-            src={post.img}
+            src={post.img.url}
             width={1000}
             height={800}
             alt="Picture of the article"
@@ -46,8 +43,12 @@ export default async function Post({ params }: {params:{slug: string}}){
         </div>
         <div className="pb-10">
           <p className="text-right">{post.date}</p>
-          <h1 className="text-4xl font-bold text-center">{post.title}</h1>
-          {post.content}
+          <h1 className="text-4xl font-bold text-center">
+            {post.title}
+          </h1>
+          <div>
+            {parse(post.content)}
+          </div>
         </div>
       </div>
       <Footer />

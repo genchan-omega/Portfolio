@@ -21,11 +21,11 @@ type BlogPost = {
     height: number;
     width: number;
   };
-  tag: string[];
+  tag: string;
   content: string;
 };
 
-export default function Gomi() {
+export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [filter, setFilter] = useState<string>("all");
 
@@ -40,14 +40,13 @@ export default function Gomi() {
         },
       });
       setPosts(data.contents);
+      console.log(data.contents);
     };
     fetchPosts();
   }, []);
-
   const filteredPosts = (filter === "all")
     ? posts
     : posts.filter((post) => post.tag.includes(filter));
-
   const tags = ["All", "Tech", "Riddle", "Movie", "Others"];
 
   return (

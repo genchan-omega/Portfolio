@@ -3,41 +3,39 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// interface Props {
-//   post: {
-//     slug: string;
-//     title: string;
-//     img: string;
-//     date: string;
-//     description: string;
-//     content: string;
-//   };
-//   dir: string;
-// }
+interface Props {
+  post: {
+    id: string;
+    title: string;
+    date: string;
+    description: string;
+    img: {
+      url: string;
+      height: number;
+      width: number;
+    };
+    tag: string;
+    content: string;
+  }
+};
 
-export default function Postcard({post}) {
-  // タグごとの色マッピング
+export default function Postcard({post}: Props) {
   const tagColorMap: Record<string, string> = {
-    tech: "bg-blue-500",
-    life: "bg-green-500",
-    design: "bg-pink-500",
-    news: "bg-yellow-500 text-black", // 文字色も調整
+    Tech: "bg-blue-500",
+    Riddle: "bg-green-500",
+    Movie: "bg-pink-500",
     default: "bg-gray-400",
   };
-
-  // 対応する色クラスを取得（なければ default）
   const tagColor = tagColorMap[post.tag] || tagColorMap.default;
-
   return (
     <Link
-      href={`/blog/${post.tag}/${post.slug}`}
+      href={`/blog/${post.id}`}
       className="border-2 m-4 transition-transform duration-300 hover:scale-105"
     >
       <figure className="relative flex flex-col h-90 w-full">
       <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md z-5 ${tagColor}`}>
           {post.tag}
         </div>
-
         <div className="w-full h-48 overflow-hidden">
           <Image
             src={post.img.url}
