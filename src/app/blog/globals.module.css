@@ -20,6 +20,11 @@
   margin-bottom: 1rem;
 }
 
+.post_content a {
+  color: blue;
+  font-size: 1.1rem;
+}
+
 .post_content ul {
   list-style-type: disc;
   padding-left: 1.5rem;

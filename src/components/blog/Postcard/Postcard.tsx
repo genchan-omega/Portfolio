@@ -33,7 +33,7 @@ export default function Postcard({post}: Props) {
       className="border-2 m-4 transition-transform duration-300 hover:scale-105"
     >
       <figure className="relative flex flex-col h-90 w-full">
-      <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md z-5 ${tagColor}`}>
+        <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md ${tagColor}`}>
           {post.tag}
         </div>
         <div className="w-full h-48 overflow-hidden">
@@ -47,7 +47,7 @@ export default function Postcard({post}: Props) {
             className="w-full"
           />
         </div>
-        <h2 className="text-lg md:text-2xl border-b-2 border-dotted z-1">
+        <h2 className="text-lg md:text-2xl border-b-2 border-dotted">
           {post.title}
         </h2>
         <figcaption>
