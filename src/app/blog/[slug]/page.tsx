@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
+import classes from "../globals.module.css";
 
 export async function generateStaticParams() {
   const data = await client.getList({
@@ -28,6 +29,7 @@ export default async function Post({ params }: {params: Promise<{ slug: string }
     contentId: slug,
   });
 
+  console.log(post.content);
   return (
     <div className="flex flex-col min-h-screen w-full max-w-screen mx-auto items-center justify-center">
       <div className="w-full max-w-screen-md mx-auto flex-1">
@@ -46,7 +48,7 @@ export default async function Post({ params }: {params: Promise<{ slug: string }
           <h1 className="text-4xl font-bold text-center">
             {post.title}
           </h1>
-          <div>
+          <div className={classes.post_content}>
             {parse(post.content)}
           </div>
         </div>

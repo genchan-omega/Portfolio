@@ -27,7 +27,7 @@ type BlogPost = {
 
 export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [filter, setFilter] = useState<string>("all");
+  const [filter, setFilter] = useState<string>("All");
 
   // マウント時のみ実行
   useEffect(() => {
@@ -40,14 +40,14 @@ export default function Blog() {
         },
       });
       setPosts(data.contents);
-      console.log(data.contents);
     };
     fetchPosts();
   }, []);
-  const filteredPosts = (filter === "all")
+
+  const tags = ["All", "Tech", "Riddle", "Movie", "Others"];
+  const filteredPosts = (filter === "All")
     ? posts
     : posts.filter((post) => post.tag.includes(filter));
-  const tags = ["All", "Tech", "Riddle", "Movie", "Others"];
 
   return (
     <div>
@@ -69,7 +69,7 @@ export default function Blog() {
               </option>
             ))}
           </Select>
-          <div className="grid grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             {filteredPosts.map((post) => (
               <Postcard key={post.id} post={post} />
             ))}
