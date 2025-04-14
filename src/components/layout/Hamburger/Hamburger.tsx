@@ -29,7 +29,7 @@ export default function Hamburger() {
     <div>
       {/* Button */}
 			<button
-				className="min-h-10 min-w-10 flex flex-col justify-around items-center p-2 rounded-md hover:bg-gray-600 transition duration-300"
+				className="relative min-h-10 min-w-10 flex flex-col justify-around items-center p-2 rounded-md hover:bg-gray-600 transition duration-300 z-50"
 				onClick={toggleMenu}
 			>
 				<span

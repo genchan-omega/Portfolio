@@ -17,7 +17,7 @@ export default function FadeIn({ children }: Props) {
   return (
     <div
       ref={ref}
-      className={`w-full ${inView ? "opacity-100 flex justify-center items-center" : "opacity-0 translate-y-[50%]"} duration-[1s]`}
+      className={`w-full min-h-[200px] ${inView ? "opacity-100 flex justify-center items-center" : "opacity-0 translate-y-[50%]"} duration-[1s]`}
     >
       {children}
     </div>
