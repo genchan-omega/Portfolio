@@ -95,7 +95,7 @@ export default function Hamburger() {
 				</ul>
 			</nav>
       {/* オーバーレイ */}
-      <div className={`fixed top-0 left-0 w-full h-full backdrop-blur-xs transition-opacity duration-1000 ${
+      <div className={`fixed top-0 left-0 w-full h-full backdrop-blur-xs ${
         isOpen ? "z-10" : "hidden"
       }`} onClick={toggleMenu}
       ></div>

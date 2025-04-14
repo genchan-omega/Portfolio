@@ -15,7 +15,7 @@ export default function Timelinecard(props: Props) {
 	return (
 		<Fadein>
 			<figure className="w-full md:w-128 border-2 pb-2">
-				<div className="relative h-32">
+				<div className="relative h-32 border-b-2 border-dotted">
 					<Image
 						src={props.src}
 						alt={props.title}

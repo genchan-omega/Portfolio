@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1",
+    "title": "はじめての Next.js",
+    "date": "2025-04-01",
+    "description": "Next.js の基本を紹介します。",
+    "img": {
+      "url": "/images/nextjs.png",
+      "height": 500,
+      "width": 500
+    },
+    "tag": "Tech",
+    "content": "詳細な内容..."
+  },
+  {
+    "id": "2",
+    "title": "謎解きイベントまとめ",
+    "date": "2025-04-05",
+    "description": "最近行った謎解きイベントのまとめ。",
+    "img": {
+      "url": "/images/riddle.png",
+      "height": 500,
+      "width": 500
+    },
+    "tag": "Riddle",
+    "content": "詳細な内容..."
+  }
+]
