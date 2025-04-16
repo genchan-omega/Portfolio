@@ -24,6 +24,7 @@
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0",
     "react-markdown": "^10.1.0",
+    "react-modal": "^3.16.3",
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0"
@@ -35,6 +36,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-modal": "^3.16.3",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "tailwindcss": "^4",

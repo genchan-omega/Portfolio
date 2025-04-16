@@ -9,25 +9,25 @@ export default function Hamburger() {
 	// isOpenの初期値がfalse, setIsOpenはisOpenをいじる関数
 	const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    // 初期状態ではスクロールを許可
-    document.body.style.overflow = "auto";
-    // クリーンアップ関数(2回目以降に呼び出される直前に使用)
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, []);
+	useEffect(() => {
+		// 初期状態ではスクロールを許可
+		document.body.style.overflow = "auto";
+		// クリーンアップ関数(2回目以降に呼び出される直前に使用)
+		return () => {
+			document.body.style.overflow = "auto";
+		};
+	}, []);
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => {
-      document.body.style.overflow = prev ? "auto" : "hidden";
-      return !prev;
-    });
-  };
+	const toggleMenu = () => {
+		setIsOpen((prev) => {
+			document.body.style.overflow = prev ? "auto" : "hidden";
+			return !prev;
+		});
+	};
 
 	return (
-    <div>
-      {/* Button */}
+		<div>
+			{/* Button */}
 			<button
 				className="relative min-h-10 min-w-10 flex flex-col justify-around items-center p-2 rounded-md hover:bg-gray-600 transition duration-300 z-50"
 				onClick={toggleMenu}
@@ -48,7 +48,7 @@ export default function Hamburger() {
 					}`}
 				></span>
 			</button>
-      {/* 表示リスト */}
+			{/* 表示リスト */}
 			<nav
 				className={`absolute top-full right-0 w-48 p-0 m-0 bg-gray-800 rounded-md transition duration-300 z-50 ${
 					isOpen ? "translate-x-0" : "translate-x-full"
@@ -94,11 +94,13 @@ export default function Hamburger() {
 					</li>
 				</ul>
 			</nav>
-      {/* オーバーレイ */}
-      <div className={`fixed top-0 left-0 w-full h-full backdrop-blur-xs ${
-        isOpen ? "z-10" : "hidden"
-      }`} onClick={toggleMenu}
-      ></div>
-    </div>
+			{/* オーバーレイ */}
+			<div
+				className={`fixed top-0 left-0 w-full h-full backdrop-blur-xs ${
+					isOpen ? "z-10" : "hidden"
+				}`}
+				onClick={toggleMenu}
+			></div>
+		</div>
 	);
 }

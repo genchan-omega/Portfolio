@@ -39,19 +39,19 @@ export default function Postcard({post}: Props) {
         <div className="relative w-full h-48 overflow-hidden border-b-2 border-dotted">
           <Image
             src={post.img.url}
-            // width={500}
-            // height={500}
             layout="fill"
             alt="Picture of the article"
             className="object-cover"
           />
         </div>
-        <h2 className="text-lg md:text-2xl">
-          {post.title}
-        </h2>
-        <figcaption>
-          {post.description}
-        </figcaption>
+        <div className="flex flex-col justify-center md:justify-start p-2">
+          <h2 className="text-lg md:text-2xl">
+            {post.title}
+          </h2>
+          <figcaption className="text-sm md:text-xl">
+            {post.description}
+          </figcaption>
+        </div>
       </figure>
     </Link>
   );
