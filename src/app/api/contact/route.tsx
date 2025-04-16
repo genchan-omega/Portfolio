@@ -1,12 +1,11 @@
-// /src/app/api/contact/mail.tsx
+// /src/app/api/contact/route.tsx
 
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-export const resend = new Resend(process.env.RESEND_API_KEY);
-export const toEmail = process.env.TO_EMAIL as string;
-
 export async function POST(req: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const toEmail = process.env.TO_EMAIL as string;
   const { name, email, message } = await req.json();
   try {
     await resend.emails.send({
