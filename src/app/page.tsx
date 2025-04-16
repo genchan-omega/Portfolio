@@ -12,7 +12,7 @@ export default function Home() {
 		<div className="flex flex-col min-h-screen w-full max-w-screen mx-auto items-center justify-center">
 			<div className="flex flex-col gap-5 items-center justify-center h-screen w-full md:w-200 flex-1">
 				<Profile />
-				<div className="grid grid-cols-1 md:grid-cols-2 w-130 gap-4">
+				<div className="grid grid-cols-1 md:grid-cols-2 w-135 gap-4">
 					<Contents title="Timeline" href="/timeline" />
 					<Contents title="Blog" href="/blog" />
 					<Contents title="Project" href="/project" />
