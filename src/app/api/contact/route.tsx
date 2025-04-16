@@ -3,8 +3,8 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const toEmail = process.env.TO_EMAIL as string;
+export const resend = new Resend(process.env.RESEND_API_KEY);
+export const toEmail = process.env.TO_EMAIL as string;
 
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
