@@ -3,7 +3,9 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export const runtime = 'edge';
+
+export async function Route(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   const toEmail = process.env.TO_EMAIL as string;
   const { name, email, message } = await req.json();
