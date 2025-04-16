@@ -30,14 +30,16 @@ export default function Project() {
 		<div className="flex flex-col min-h-screen w-full max-w-screen mx-auto items-center justify-center">
 			<div className="w-full max-w-screen-md mx-auto flex-1">
 				<Header />
-				<Subtitle name="Project" />
-				<div className="flex flex-col items-center w-full">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-						{projects.map((project) => (
-							<Projectcard key={project.id} project={project} />
-						))}
-					</div>
-				</div>
+        <div className="flex-1">
+          <Subtitle name="Project" />
+          <div className="flex flex-col items-center w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+              {projects.map((project) => (
+                <Projectcard key={project.id} project={project} />
+              ))}
+            </div>
+          </div>
+        </div>
 			</div>
 			<Footer />
 		</div>

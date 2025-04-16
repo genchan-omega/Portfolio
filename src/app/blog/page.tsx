@@ -50,31 +50,33 @@ export default function Blog() {
     : posts.filter((post) => post.tag.includes(filter));
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <Subtitle name="Blog" />
-      <div className="flex justify-center items-center">
-        <Field className="flex flex-col justify-center items-center gap-4">
-          <Description>絞り込み</Description>
-          <Select
-            name="tag-filter"
-            aria-label="タグで絞り込み"
-            className="w-50 text-2xl text-center border"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          >
-            {tags.map((tag) => (
-              <option key={tag} value={tag}>
-                {tag}
-              </option>
-            ))}
-          </Select>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            {filteredPosts.map((post) => (
-              <Postcard key={post.id} post={post} />
-            ))}
-          </div>
-        </Field>
+      <div className="flex-1">
+        <Subtitle name="Blog" />
+        <div className="flex justify-center items-center">
+          <Field className="flex flex-col justify-center items-center gap-4">
+            <Description>絞り込み</Description>
+            <Select
+              name="tag-filter"
+              aria-label="タグで絞り込み"
+              className="w-50 text-2xl text-center border"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+            >
+              {tags.map((tag) => (
+                <option key={tag} value={tag}>
+                  {tag}
+                </option>
+              ))}
+            </Select>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              {filteredPosts.map((post) => (
+                <Postcard key={post.id} post={post} />
+              ))}
+            </div>
+          </Field>
+        </div>
       </div>
       <Footer />
     </div>

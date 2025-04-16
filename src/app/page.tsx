@@ -16,6 +16,7 @@ export default function Home() {
 					<Contents title="Timeline" href="/timeline" />
 					<Contents title="Blog" href="/blog" />
 					<Contents title="Project" href="/project" />
+          <Contents title="Contact" href="/contact" />
 				</div>
 			</div>
 			<Footer />

@@ -84,12 +84,20 @@ export default function Hamburger() {
 							Blog
 						</Link>
 					</li>
-					<li className="flex justify-center items-center h-full w-full hover:bg-gray-600 transition duration-300 p-0 m-0">
+					<li className="flex justify-center items-center h-full w-full border-b-2 border-dotted hover:bg-gray-600 transition duration-300 p-0 m-0">
 						<Link
 							href="/project"
 							className="h-full w-full p-4 text-xl text-center"
 						>
 							Project
+						</Link>
+					</li>
+          <li className="flex justify-center items-center h-full w-full hover:bg-gray-600 transition duration-300 p-0 m-0">
+						<Link
+							href="/contact"
+							className="h-full w-full p-4 text-xl text-center"
+						>
+							Contact
 						</Link>
 					</li>
 				</ul>
