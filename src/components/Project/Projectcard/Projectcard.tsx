@@ -29,7 +29,7 @@ export default function Projectcard({ project }: { project:  Project }) {
 		<div className="flex flex-col items-center justify-center w-full">
 			{/* カード表示部分 */}
       <button
-				className="relative border-2 m-4 transition-transform duration-300 hover:scale-105 w-full"
+				className="relative border-2 m-4 transition-transform duration-300 hover:scale-105 w-full sm:w-auto sm:min-w-md md:w-full md:min-w-auto"
 				onClick={() => setIsOpen(true)}
 			>
 				<div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md `}>

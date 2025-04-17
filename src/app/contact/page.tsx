@@ -39,44 +39,44 @@ export default function Contact() {
   };
   
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <Header />
-        <Subtitle name="Contact" />
-        <div className="flex flex-col flex-1 justify-center items-center">
-          <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full h-10 border p-2 rounded"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Mail Address"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full h-10 border p-2 rounded"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full h-30 border p-2 rounded"
-              required
-            />
-            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-800 text-white shadow-md px-4 py-2 rounded transition duration-300">
-              Submit
-            </button>
-            <p>
-              {status}
-            </p>
-          </form>
+      <Subtitle name="Contact" />
+      <div className="flex flex-col flex-1 justify-center items-center">
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full h-10 border p-2 rounded"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Mail Address"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full h-10 border p-2 rounded"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full h-30 border p-2 rounded"
+            required
+          />
+          <button type="submit" className="w-full bg-blue-600 hover:bg-blue-800 text-white shadow-md px-4 py-2 rounded transition duration-300">
+            Submit
+          </button>
+          <p>
+            {status}
+          </p>
+      </form>
         <div className="justify-start items-start m-4 max-w-md">
           <h2 className="text-left font-bold text-xl">
             [Notification]
