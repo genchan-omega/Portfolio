@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from "react";
 import { client } from "@/libs/microcms";
-import { Field, Select, Description } from "@headlessui/react";
+import { Field, Select } from "@headlessui/react";
 
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
@@ -52,14 +52,12 @@ export default function Blog() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="flex-1">
+      <div className="w-full max-w-screen-md mx-auto flex-1">
         <Subtitle name="Blog" />
-        <div className="flex justify-center items-center">
           <Field className="flex flex-col justify-center items-center gap-4">
-            <Description>絞り込み</Description>
             <Select
               name="tag-filter"
-              aria-label="タグで絞り込み"
+              aria-label="絞り込み"
               className="w-50 text-2xl text-center border"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
@@ -70,14 +68,13 @@ export default function Blog() {
                 </option>
               ))}
             </Select>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              {filteredPosts.map((post) => (
-                <Postcard key={post.id} post={post} />
-              ))}
-            </div>
           </Field>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-5">
+            {filteredPosts.map((post) => (
+              <Postcard key={post.id} post={post} />
+            ))}
+          </div>
         </div>
-      </div>
       <Footer />
     </div>
   );

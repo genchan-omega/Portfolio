@@ -29,10 +29,10 @@ export default function Projectcard({ project }: { project:  Project }) {
 		<div className="flex flex-col items-center justify-center w-full">
 			{/* カード表示部分 */}
       <button
-				className="relative border-2 m-4 transition-transform duration-300 hover:scale-105 w-full sm:w-auto sm:min-w-md md:w-full md:min-w-auto"
+				className="relative border-2 transition duration-300 hover:scale-105 w-full sm:w-auto sm:min-w-md md:w-full md:min-w-auto"
 				onClick={() => setIsOpen(true)}
 			>
-				<div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md `}>
+				<div className="absolute top-2 right-2 text-xs px-2 py-1 rounded-md">
 					{project.tag}
 				</div>
 				<figure className="h-40 md:h-90 w-full flex flex-row md:flex-col">
@@ -45,7 +45,9 @@ export default function Projectcard({ project }: { project:  Project }) {
 						/>
 					</div>
 					<div className="flex flex-col justify-center md:justify-start p-2 flex-1">
-						<h2 className="text-lg md:text-2xl">{project.title}</h2>
+						<h2 className="text-lg md:text-2xl">
+              {project.title}
+            </h2>
 						<figcaption className="text-sm md:text-xl">
 							{project.description}
 						</figcaption>
@@ -55,7 +57,7 @@ export default function Projectcard({ project }: { project:  Project }) {
       
       {/* モーダル表示部分 */}
 			<Modal
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-200 p-6 rounded-lg shadow-lg w-[90%] max-w-xl max-h-[90vh] overflow-y-auto scrollbar-none"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-200 p-6 rounded-lg w-[90%] max-w-xl max-h-[90vh] overflow-y-auto"
         overlayClassName="fixed inset-0 z-50 backdrop-blur-xs"
         htmlOpenClassName="overflow-hidden"
         isOpen={isOpen}
@@ -63,12 +65,12 @@ export default function Projectcard({ project }: { project:  Project }) {
       >
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-2 right-2 text-2xl text-yellow-900 hover:text-red-600 transition-colors duration-300"
+          className="absolute top-2 right-2 text-4xl font-bold text-yellow-900 hover:text-red-600 transition-colors duration-300"
           aria-label="Close modal"
         >
           &times;
         </button>
-        <div className="relative h-60 w-full mt-4 overflow-hidden">
+        <div className="relative h-60 w-full mt-7 overflow-hidden">
           <Image
             src={project.img}
             fill

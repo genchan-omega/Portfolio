@@ -30,10 +30,11 @@ export default function Contact() {
         "Content-Type": "application/json"
       }
     });
-    if (res.ok) {
+    if(res.ok){
       setStatus("Complete!");
       setFormData({ name: "", email: "", message: "" });
-    } else {
+    }
+    else{
       setStatus("Failed, please try agein.");
     }
   };
@@ -76,7 +77,7 @@ export default function Contact() {
           <p>
             {status}
           </p>
-      </form>
+        </form>
         <div className="justify-start items-start m-4 max-w-md">
           <h2 className="text-left font-bold text-xl">
             [Notification]

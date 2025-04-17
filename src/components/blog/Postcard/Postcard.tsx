@@ -30,13 +30,13 @@ export default function Postcard({post}: Props) {
   return (
     <Link
       href={`/blog/${post.id}`}
-      className="border-2 m-4 transition-transform duration-300 hover:scale-105"
+      className="relative border-2 transition duration-300 hover:scale-105 w-full sm:w-auto sm:min-w-md md:w-full md:min-w-auto"
     >
-      <figure className="relative flex flex-col h-90 w-full">
-        <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md ${tagColor}`}>
-          {post.tag}
-        </div>
-        <div className="relative w-full h-48 overflow-hidden border-b-2 border-dotted">
+      <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md ${tagColor}`}>
+        {post.tag}
+      </div>
+      <figure className="h-40 md:h-90 w-full flex flex-row md:flex-col">
+        <div className="relative h-40 w-40 md:h-48 md:w-full overflow-hidden border-r-2 border-dotted md:border-r-0 md:border-b-2">
           <Image
             src={post.img.url}
             layout="fill"
@@ -44,7 +44,7 @@ export default function Postcard({post}: Props) {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col justify-center md:justify-start p-2">
+        <div className="flex flex-col justify-center md:justify-start p-2 flex-1">
           <h2 className="text-lg md:text-2xl">
             {post.title}
           </h2>
