@@ -98,7 +98,7 @@ export default function Projectcard({ project }: { project:  Project }) {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block p-2 bg-blue-500 rounded shadow-md  hover:bg-blue-700 transition-colors duration-500"
+                  className="inline-block p-2 border-1 border-cyan-100 rounded shadow-md  hover:bg-gray-700 transition-colors duration-500"
                 >
                   {label}
                 </a>
