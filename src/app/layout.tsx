@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | genchan_omega",
   },
   description: "genchan_omega's Site",
-  keywords: ["genchan_omega", "genchan", "omega"],
+  keywords: ["genchan_omega", "genchan", "omega", "はだしの", "ゲンちゃん"],
   authors: [
     {
       name: "genchan_omega",
@@ -19,13 +19,18 @@ export const metadata: Metadata = {
     }
   ],
   openGraph: {
+    title: {
+      default: "genchan_omega",
+      template: "%s | genchan_omega",
+    },
+    description: "Let me introduce myself.",
     siteName: "genchan_omega",
     type: "website",
     locale: "ja_JP",
     url: "https://genchan-omega.dev",
     images: [
       {
-        url: "/profile/profile.jpg",
+        url: "https://genchan-omega.dev/profile/profile.jpg",
         width: 600,
         height: 600,
         alt: "Open Graph Image",
