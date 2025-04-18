@@ -64,7 +64,7 @@ export default function Contactform() {
           className="w-full h-30 border p-2 rounded"
           required
         />
-        <button type="submit" className="w-full bg-blue-600 hover:bg-blue-800 text-white shadow-md px-4 py-2 rounded transition duration-300">
+        <button type="submit" className="w-full text-xl font-bold border-2 border-cyan-100 hover:bg-gray-700 hover:cursor-pointer shadow-md px-4 py-2 rounded transition duration-300">
           Submit
         </button>
         <p>
