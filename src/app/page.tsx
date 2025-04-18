@@ -2,29 +2,10 @@
 
 import type { Metadata } from "next";
 
-// Metaデータ
+// metaデータ
 export const metadata: Metadata = {
-  title: "Index Page",
-  description: "You can access each content.",
-  openGraph: {
-    siteName: "genchan_omega's Site",
-    type: "website",
-    locale: "ja_JP",
-    url: "https://genchan-omega.dev",
-    images: [
-      {
-        url: "/default-ogp.jpg",
-        width: 1200,
-        height: 630,
-        alt: "共通OGP画像",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@genchan_omega",
-  },
-  metadataBase: new URL("https://genchan-omega.dev"),
+  title: "Index",
+  description: "Access to each contents about me.",
 };
 
 import Profile from "@/components/index/Profile/Profile";

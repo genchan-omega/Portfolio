@@ -1,9 +1,17 @@
 // /src/timeline/page.tsx
 
+import type { Metadata } from "next";
+
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import Subtitle from "@/components/layout/Subtitle/Subtitle";
 import Timelinecard from "@/components/timeline/Timelinecard/Timelinecard";
+
+// metaデータ
+export const metadata: Metadata = {
+  title: "Timeline",
+  description: "Follow my life in chronological order.",
+};
 
 export default function Timeline() {
 	return (

@@ -1,7 +1,7 @@
 // /src/abountme/page.tsx
 
+import type { Metadata } from "next";
 import Image from "next/image";
-// import Link from "next/link";
 
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
@@ -9,6 +9,13 @@ import Subtitle from "@/components/layout/Subtitle/Subtitle";
 import Skill from "@/components/aboutme/Skill/Skill";
 
 import profile from "@/public/profile/profile.jpg";
+
+
+// metaデータ
+export const metadata: Metadata = {
+  title: "Aboutme",
+  description: "Find out about me.",
+};
 
 export default function Aboutme() {
 	return (

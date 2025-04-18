@@ -2,6 +2,7 @@
 
 "use client";
 
+import type { Metadata } from "next";
 import { useState, useEffect } from "react";
 import { client } from "@/libs/microcms";
 import { Field, Select } from "@headlessui/react";
@@ -10,6 +11,12 @@ import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import Subtitle from "@/components/layout/Subtitle/Subtitle";
 import Postcard from "@/components/blog/Postcard/Postcard";
+
+// metaデータ
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Read the blog I wrote.",
+};
 
 type BlogPost = {
   id: string;

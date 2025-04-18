@@ -6,8 +6,8 @@ import "./globals.css";
 
 // Metaデータ
 export const metadata: Metadata = {
-  title: "genchan_omega's Site",
-  description: "Let me introduce myself.",
+  title: "genchan_omega",
+  description: "genchan_omega's Site",
   openGraph: {
     siteName: "genchan_omega's Site",
     type: "website",
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     url: "https://genchan-omega.dev",
     images: [
       {
-        url: "/default-ogp.jpg",
-        width: 1200,
-        height: 630,
-        alt: "共通OGP画像",
+        url: "/profile/profile.jpg",
+        width: 600,
+        height: 600,
+        alt: "Open Graph Image",
       },
     ],
   },

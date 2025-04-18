@@ -7,6 +7,13 @@ import Footer from "@/components/layout/Footer/Footer";
 import Subtitle from "@/components/layout/Subtitle/Subtitle";
 
 import { useState } from "react";
+import type { Metadata } from "next";
+
+// metaデータ
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact me via email.",
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({

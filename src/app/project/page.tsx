@@ -1,5 +1,7 @@
 // /src/Project/page.tsx
 
+import type { Metadata } from "next";
+
 import fs from "fs";
 
 import Header from "@/components/layout/Header/Header";
@@ -7,6 +9,12 @@ import Footer from "@/components/layout/Footer/Footer";
 import Subtitle from "@/components/layout/Subtitle/Subtitle";
 // import Working from "@/components/Working/Working";
 import Projectcard from "@/components/Project/Projectcard/Projectcard";
+
+// metaデータ
+export const metadata: Metadata = {
+  title: "Project",
+  description: "Check the productions I have created.",
+};
 
 interface Projects {
   id: string;
