@@ -1,7 +1,8 @@
 // next-sitemap.config.js
 
-// next-sitemap.config.js
-export default {
-  siteUrl: 'https://example.com',
+const config = {
+  siteUrl: "https://genchan-omega.dev",
   generateRobotsTxt: true,
 };
+
+export default config;

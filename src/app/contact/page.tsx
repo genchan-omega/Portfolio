@@ -3,7 +3,7 @@
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import Subtitle from "@/components/layout/Subtitle/Subtitle";
-import Contactform from "@/components/contact/Contactform";
+import Contactform from "@/components/contact/Contactform/Contactform";
 
 import type { Metadata } from "next";
 

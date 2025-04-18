@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | genchan_omega",
   },
   description: "genchan_omega's Site",
-  keywords: ["genchan_omega", "genchan", "omega", "Next.js", "Engineer", "Blog"],
+  keywords: ["genchan_omega", "genchan", "omega"],
   authors: [
     {
       name: "genchan_omega",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     }
   ],
   openGraph: {
-    siteName: "genchan_omega's Site",
+    siteName: "genchan_omega",
     type: "website",
     locale: "ja_JP",
     url: "https://genchan-omega.dev",
