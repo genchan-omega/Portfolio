@@ -43,7 +43,7 @@ export default function Contact() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <Subtitle name="Contact" />
-      <div className="flex flex-col flex-1 justify-center items-center">
+      <div className="flex flex-col flex-1 items-center">
         <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4">
           <input
             type="text"

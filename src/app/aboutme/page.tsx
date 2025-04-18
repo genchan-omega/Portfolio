@@ -12,10 +12,10 @@ import profile from "@/public/profile/profile.jpg";
 
 export default function Aboutme() {
 	return (
-		<div>
+		<div className="flex flex-col min-h-screen">
 			<Header />
 			<Subtitle name="About Me" />
-			<div className="flex flex-col justify-center items-center w-full mx-auto">
+			<div className="flex flex-col flex-1 items-center">
 				<h2 className="text-4xl md:text-5xl font-bold underline text-center">
 					Basic Info
 				</h2>

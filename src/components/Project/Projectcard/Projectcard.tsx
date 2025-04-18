@@ -57,7 +57,7 @@ export default function Projectcard({ project }: { project:  Project }) {
       
       {/* モーダル表示部分 */}
 			<Modal
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-200 p-6 rounded-lg w-[90%] max-w-xl max-h-[90vh] overflow-y-auto"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900 border-2 border-gray-700 p-6 rounded-lg w-[90%] max-w-xl max-h-[90vh] overflow-y-auto"
         overlayClassName="fixed inset-0 z-50 backdrop-blur-xs"
         htmlOpenClassName="overflow-hidden"
         isOpen={isOpen}
@@ -65,7 +65,7 @@ export default function Projectcard({ project }: { project:  Project }) {
       >
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-2 right-2 text-4xl font-bold text-yellow-900 hover:text-red-600 transition-colors duration-300"
+          className="absolute top-2 right-2 text-4xl font-bold hover:text-rose-300 hover:cursor-pointer transition duration-300"
           aria-label="Close modal"
         >
           &times;
@@ -78,17 +78,17 @@ export default function Projectcard({ project }: { project:  Project }) {
             className="object-cover"
           />
         </div>
-        <div className="text-right text-yellow-900">
+        <div className="text-right">
           {project.date}
         </div>
-        <h2 className="text-center text-yellow-900 text-3xl pb-3">
+        <h2 className="text-center text-3xl pb-3">
           {project.title}
         </h2>
-        <div className="text-yellow-900 text-xl whitespace-pre-line">
+        <div className="text-xl whitespace-pre-line">
           {project.content}
         </div>
         <div className="pt-3">
-          <h3 className="text-xl font-bold text-yellow-900 mb-2">
+          <h3 className="text-xl font-bold mb-2">
             [関連リンク]
           </h3>
           <ul className="flex gap-3">
@@ -98,7 +98,7 @@ export default function Projectcard({ project }: { project:  Project }) {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block p-2 bg-blue-500 text-white rounded shadow-md  hover:bg-fuchsia-500 transition-colors duration-500"
+                  className="inline-block p-2 bg-blue-500 rounded shadow-md  hover:bg-blue-700 transition-colors duration-500"
                 >
                   {label}
                 </a>
