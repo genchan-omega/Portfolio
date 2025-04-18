@@ -6,8 +6,18 @@ import "./globals.css";
 
 // Metaデータ
 export const metadata: Metadata = {
-  title: "genchan_omega",
+  title: {
+    default: "genchan_omega",
+    template: "%s | genchan_omega",
+  },
   description: "genchan_omega's Site",
+  keywords: ["genchan_omega", "genchan", "omega", "Next.js", "Engineer", "Blog"],
+  authors: [
+    {
+      name: "genchan_omega",
+      url: "https://genchan-omega.dev"
+    }
+  ],
   openGraph: {
     siteName: "genchan_omega's Site",
     type: "website",
