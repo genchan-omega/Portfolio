@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 // metaデータ
 export const metadata: Metadata = {
-  title: "Index",
+  title: "genchan_omega's Site",
   description: "Access to each contents about me.",
 };
 
@@ -28,3 +28,4 @@ export default function Home() {
 		</div>
 	);
 }
+ 
