@@ -50,7 +50,7 @@ export default function Hamburger() {
 			</button>
 			{/* 表示リスト */}
 			<nav
-				className={`absolute top-full right-0 w-48 p-0 m-0 bg-gray-600 rounded-md transition duration-300 z-50 ${
+				className={`absolute top-full right-0 w-48 p-0 m-0 rounded-md transition duration-300 z-50 ${
 					isOpen ? "translate-x-0" : "translate-x-full"
 				}`}
 			>
