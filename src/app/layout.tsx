@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | genchan_omega",
   },
   description: "genchan_omega's Site",
-  keywords: ["genchan_omega", "genchan", "omega", "はだしの", "ゲンちゃん"],
+  keywords: ["genchan_omega", "genchan", "omega", "はだしのゲンちゃん", "はだしの", "ゲンちゃん"],
   authors: [
     {
       name: "genchan_omega",
