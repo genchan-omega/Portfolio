@@ -1,73 +1,59 @@
-// /src/components/Contact/Contactform/Contactform.tsx
+// /src/components/blog/Contents/Contents.tsx
 
 "use client";
 
-import { useState, useEffect } from "react";
-import { client } from "@/libs/microcms";
-import { Field, Select } from "@headlessui/react";
-
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import Postcard from "@/components/blog/Postcard/Postcard";
 
-type BlogPost = {
-  id: string;
-  title: string;
-  date: string;
-  description: string;
-  img: {
-    url: string;
-    height: number;
-    width: number;
-  };
-  tag: string;
-  content: string;
-};
+import { useState } from "react";
 
 export default function Blog() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [filter, setFilter] = useState<string>("All");
-
-  // マウント時のみ実行
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const data = await client.getList({
-        endpoint: "blog",
-        queries: {
-          fields: "id,title,date,description,img,tag,content",
-          limit: 50,
-        },
-      });
-      setPosts(data.contents);
-    };
-    fetchPosts();
-  }, []);
-
   const tags = ["All", "Tech", "Riddle", "Movie", "Others"];
+  const [filter, setFilter] = useState("All");
+
+  const postsDirectoryPath = "src/components/blog/Posts/tech";
+  const files = fs.readdirSync(postsDirectoryPath).filter((filename) => !filename.startsWith("_"));
+
+  const posts = files
+    .map((filename) => {
+      const filePath = path.join(postsDirectoryPath, filename);
+      const fileContent = fs.readFileSync(filePath, "utf8");
+      const { data } = matter(fileContent);
+      return {
+        slug: filename.replace(".md", ""),
+        title: data.title,
+        img: data.img,
+        date: data.date,
+        description: data.description,
+        tag: data.tag
+      };
+    })
+    .reverse();
+
   const filteredPosts = (filter === "All")
     ? posts
-    : posts.filter((post) => post.tag.includes(filter));
+    : posts.filter((post) => post.tag === filter);
 
   return (
     <div className="w-full max-w-screen-md mx-auto flex-1">
-        <Field className="flex flex-col justify-center items-center gap-4">
-          <Select
-            name="tag-filter"
-            aria-label="絞り込み"
-            className="w-50 text-2xl text-center border"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          >
-            {tags.map((tag) => (
-              <option key={tag} value={tag}>
-                {tag}
-              </option>
-            ))}
-          </Select>
-        </Field>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-5">
-          {filteredPosts.map((post) => (
-            <Postcard key={post.id} post={post} />
+      <div className="flex flex-col justify-center items-center gap-4">
+        <select
+          className="w-50 text-2xl text-center border"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+        >
+          {tags.map((tag) => (
+            <option key={tag} value={tag}>{tag}</option>
           ))}
-        </div>
+        </select>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-5">
+        {filteredPosts.map((post) => (
+          <Postcard key={post.slug} post={post} />
+        ))}
+      </div>
+    </div>
   );
 }
