@@ -3,7 +3,7 @@ title: "ブログ作成記<1>"
 img: "/others/dummy.png"
 date: "2025-03-28"
 description: "自作ブログを作るために奮闘した記録を残します．"
-tags: [dev, nextjs]
+tag: Tech
 ---
 
 # この記事の内容

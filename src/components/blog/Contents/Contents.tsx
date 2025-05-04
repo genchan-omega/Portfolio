@@ -3,18 +3,24 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Postcard from "@/components/blog/Postcard/Postcard";
+// import Postcard from "@/components/blog/Postcard/Postcard";
+import Bloglist from "../Bloglist/Bloglist";
 
-export default function Blog() {
+export default function Contents() {
     // 記事のデータを取得
-    const postsDirectoryPath = "src/components/blog/Posts/tech";
-    const files = fs.readdirSync(postsDirectoryPath).filter((filename) => !filename.startsWith("_"));
-    const posts = files.map((filename) => {
-      const filePath = path.join(postsDirectoryPath, filename);
+    const postsDirectoryPath = "public/posts";
+    const directories = fs.readdirSync(postsDirectoryPath).filter((filename) => {
+      const fullPath = path.join(postsDirectoryPath, filename);
+      return fs.statSync(fullPath).isDirectory() && !filename.startsWith("_");
+    });
+    
+
+    const posts = directories.map((dirname) => {
+      const filePath = path.join(postsDirectoryPath, dirname, "index.md");
       const fileContent = fs.readFileSync(filePath, "utf8");
       const { data } = matter(fileContent);
       return {
-        slug: filename.replace(".md", ""),
+        slug: dirname,
         title: data.title, 
         img: data.img,
         date: data.date,
@@ -26,11 +32,7 @@ export default function Blog() {
 
   return (
     <div className="w-full max-w-screen-md mx-auto flex-1">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-5">
-        {posts.map((post) => (
-          <Postcard key={post.slug} post={post} />
-        ))}
-      </div>
+      <Bloglist posts={posts} />
     </div>
   );
 }

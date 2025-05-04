@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://genchan-omega.dev/contact</loc><lastmod>2025-04-18T11:35:43.842Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://genchan-omega.dev/project</loc><lastmod>2025-04-18T11:35:43.843Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://genchan-omega.dev/blog</loc><lastmod>2025-04-18T11:35:43.843Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://genchan-omega.dev</loc><lastmod>2025-04-18T11:35:43.843Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://genchan-omega.dev/timeline</loc><lastmod>2025-04-18T11:35:43.843Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://genchan-omega.dev/aboutme</loc><lastmod>2025-04-18T11:35:43.843Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://genchan-omega.dev/blog/jkrsnefva</loc><lastmod>2025-04-18T11:35:43.843Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://genchan-omega.dev/blog/vj6jtnql6ip</loc><lastmod>2025-04-18T11:35:43.843Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/contact</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/timeline</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/project</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/aboutme</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/blog</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/blog/2025-03-28-makeblog1</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/blog/2025-03-29-makeblog2</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://genchan-omega.dev/blog/2025-03-30-makeblog3</loc><lastmod>2025-05-03T10:25:51.841Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

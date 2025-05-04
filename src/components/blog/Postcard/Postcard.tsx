@@ -16,10 +16,10 @@ interface Props {
 
 export default function Postcard({ post }: Props) {
   const tagColorMap: Record<string, string> = {
-    Tech: "bg-blue-500",
-    Riddle: "bg-green-500",
-    Movie: "bg-pink-500",
-    Others: "bg-gray-400",
+    Tech: "bg-cyan-300",
+    Riddle: "bg-green-300",
+    Movie: "bg-pink-300",
+    Others: "bg-gray-300",
   };
   const tagColor = tagColorMap[post.tag] || "bg-gray-400";
 
@@ -28,7 +28,7 @@ export default function Postcard({ post }: Props) {
       href={`/blog/${post.slug}`}
       className="relative border-2 transition duration-300 hover:scale-105 w-full"
     >
-      <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md ${tagColor}`}>
+      <div className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md ${tagColor} text-black border-2`}>
         {post.tag}
       </div>
       <figure className="h-40 md:h-90 w-full flex flex-row md:flex-col">
@@ -37,7 +37,7 @@ export default function Postcard({ post }: Props) {
             src={post.img}
             fill
             alt="Picture of the article"
-            className="object-cover"
+            className="object-cover -z-1"
           />
         </div>
         <div className="flex flex-col justify-center md:justify-start p-2 flex-1">
