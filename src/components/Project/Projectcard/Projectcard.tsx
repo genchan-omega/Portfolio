@@ -10,9 +10,8 @@ import Modal from "react-modal";
 Modal.setAppElement("html");
 
 interface Project {
-  id: string;
-  title: string;
   date: string;
+  title: string;
   description: string;
   img: string;
   tag: string;
@@ -29,7 +28,7 @@ export default function Projectcard({ project }: { project:  Project }) {
 		<div className="flex flex-col items-center justify-center w-full">
 			{/* カード表示部分 */}
       <button
-				className="relative border-2 transition duration-300 hover:scale-105 w-full sm:w-auto sm:min-w-md md:w-full md:min-w-auto"
+				className="relative border-2 transition duration-300 hover:scale-105 w-full sm:w-md md:w-full hover:cursor-pointer"
 				onClick={() => setIsOpen(true)}
 			>
 				<div className="absolute top-2 right-2 text-xs px-2 py-1 rounded-md">
@@ -41,7 +40,7 @@ export default function Projectcard({ project }: { project:  Project }) {
 							src={project.img}
 							fill
 							alt="Picture of the article"
-							className="object-cover"
+							className="object-cover -z-1"
 						/>
 					</div>
 					<div className="flex flex-col justify-center md:justify-start p-2 flex-1">

@@ -41,7 +41,7 @@ export default function Project() {
         <Subtitle name="Project" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full pb-5">
           {projects.map((project) => (
-            <Projectcard key={project.id} project={project} />
+            <Projectcard key={project.date} project={project} />
           ))}
         </div>
 			</div>
