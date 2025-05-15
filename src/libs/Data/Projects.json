@@ -6,7 +6,7 @@
     "img": "/project/microbit.png",
     "tag": "Tech",
     "link": {
-      "Product": "/"
+      "Canva": "https://www.canva.com/design/DAGnTn58do4/gmT2tPsTz-p_FlNNjWDIcw/edit?utm_content=DAGnTn58do4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
     },
     "content": "マイコンの代表例であるmicro:bitを用いて，LINE Beaconを作りました．初めてプログラミングを用いた制作物ということでたくさん難しいところもありましたが，周りの人にいっぱい助けてもらいなんとか完成させることができました．\nこのLINE Beaconは，Bluetooth機能をオンにしたスマホがmicro:bitに近づくことで，その旨を通知してくれます．また，誰か何時にBeaconに近づいたのかを全てGoogleスプレッドシートに記入してくれるので，一元的な管理にも役立ちます．\nこのBeaconはLINE DeveroperとGoogle Apps Scriptを使って実装したので，実はかなりの拡張性が見込めます．micro:bitの多様さを知ることができた制作物となりました．"
   },
